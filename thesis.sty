@@ -194,21 +194,27 @@
 % 目次環境再定義
 \renewcommand{\tableofcontents}{%
   \section*{\contentsname}
+  \begin{singlespace}
   \@starttoc{toc}
+  \end{singlespace}
   \newpage
 }
 
 % 図目次環境再定義
 \renewcommand{\listoffigures}{%
   \section*{\listfigurename}
+  \begin{singlespace}
   \@starttoc{lof}
+  \end{singlespace}
   \newpage
 }
 
 % 表目次環境再定義
 \renewcommand{\listoftables}{%
   \section*{\listtablename}
+  \begin{singlespace}
   \@starttoc{lot}
+  \end{singlespace}
   \cleardoublepage
 }
 
