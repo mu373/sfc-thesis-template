@@ -29,14 +29,16 @@
 \begin{table}[htbp]
   \caption{章と節のコマンド}
   \label{tb:chap}
-  \begin{center}\begin{tabular}{c|c}
-    \hline
-    コマンド&用途\\\hline\hline
-    \verb|\chapter{見出し}|&章\\\hline
-    \verb|\section{見出し}|&節\\\hline
-    \verb|\subsection{見出し}|&小節\\\hline
-    \verb|\subsubsection{見出し}|&小々節\\\hline
-    \end{tabular}\end{center}
+  \begin{center}
+    \begin{tabular}{@{}cc@{}}
+      \toprule
+      コマンド & 用途 \\ \midrule
+      \verb|\chapter{見出し}| & 章 \\
+      \verb|\section{見出し}| & 節 \\
+      \verb|\subsection{見出し}| & 小節 \\
+      \verb|\subsubsection{見出し}| & 小々節 \\ \bottomrule
+    \end{tabular}
+  \end{center}
 \end{table}
 
 \subsubsection{小々節見出しサンプルその1}
@@ -161,13 +163,14 @@ bbの指定は，上記のように\texttt{*.tex} ファイルの中で指定し
   \caption{表の例}
   \label{tb:sample1}
   \begin{center}
-  \begin{tabular}{l|c|r}
-    \hline
-    種類	&味&評価\\\hline\hline
-    ドラ焼き&甘い&好き\\\hline
-    メロンパン&カリもふ&好き\\\hline
-    クリームパン&神&すごく好き\\\hline
-  \end{tabular}\end{center}
+    \begin{tabular}{@{}lcc@{}}
+      \toprule
+      種類 & 味 & 評価 \\ \midrule
+      ドラ焼き & 甘い & 好き \\
+      メロンパン & カリもふ & 好き \\
+      クリームパン & 神 & すごく好き \\ \bottomrule
+      \end{tabular}
+  \end{center}
 \end{table}
 
 ソースでは次のようになっている．
@@ -180,13 +183,14 @@ bbの指定は，上記のように\texttt{*.tex} ファイルの中で指定し
   \caption{表の例}
   \label{tb:sample1}
   \begin{center}
-  \begin{tabular}{l|c|r}
-    \hline
-    種類	&味&評価\\\hline\hline
-    ドラ焼き&甘い&好き\\\hline
-    メロンパン&カリもふ&好き\\\hline
-    クリームパン&神&すごく好き\\\hline
-  \end{tabular}\end{center}
+    \begin{tabular}{@{}lcc@{}}
+      \toprule
+      種類 & 味 & 評価 \\ \midrule
+      ドラ焼き & 甘い & 好き \\
+      メロンパン & カリもふ & 好き \\
+      クリームパン & 神 & すごく好き \\ \bottomrule
+      \end{tabular}
+  \end{center}
 \end{table}
 \end{verbatim}
 \end{itembox}
