@@ -2,7 +2,14 @@
 
 こちらの[テンプレート](https://github.com/sasn0/thesis-overleaf-template)をベースに作った、SFC卒業論文用LaTeXテンプレートです。[ymrlさんのテンプレート](https://github.com/ymrl/thesis-template)が大元のフォーク元です。
 
+以下のような変更を加えています。
 
+- PDF目次に対応（`hyperref`を使用）
+- 元号を令和に変更（変数として任意に定義可能なよう変更）
+- commit hashをフッターに追加
+- ダブルスペースに変更
+- 参考文献スタイルをjunsrtに変更
+- 数式フォントをLatin Modernに変更
 
 ## 使い方
 
