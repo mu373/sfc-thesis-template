@@ -1,4 +1,5 @@
-$latex = "find . -type f -name '*.tex' -print0 | xargs -0 sed -i '' -e 's/、/，/g' -e 's/。/．/g'; platex";
+# $latex = "find . -type f -name '*.tex' -print0 | xargs -0 sed -i '' -e 's/、/，/g' -e 's/。/．/g'; platex";
+$latex = "platex";
 $bibtex = 'pbibtex';
 $dvipdf = 'dvipdfmx -f ptex-ipaex.map %O -o %D %S';
 $makeindex = 'mendex -U %O -o %D %S';
