@@ -1,7 +1,7 @@
 \chapter{本テンプレートの使い方}
 \label{chap:howto}
 
-本章では，本テンプレートの具体的な使用方法を解説する．基本的には，{\tt main.tex} を上から順に修正していけばよいだけ． 
+本章では，本テンプレートの具体的な使用方法を解説する．基本的には，\texttt{main.tex} を上から順に修正していけばよいだけ． 
 
 
 \section{テンプレートの構成}
@@ -35,7 +35,7 @@
 \end{verbatim}
 \end{itembox}
 
-こうすることで，\verb|platex|コマンド，\verb|pbibtex|コマンド，\verb|platex|コマンド2回，\verb|dvipdfmx|コマンドが全て実行され，{\tt main.pdf}が生成される．
+こうすることで，\verb|platex|コマンド，\verb|pbibtex|コマンド，\verb|platex|コマンド2回，\verb|dvipdfmx|コマンドが全て実行され，\texttt{main.pdf}が生成される．
 
 コンパイルによって生成されたファイルを全て消すには，以下のようにする．
 
@@ -47,12 +47,12 @@
 
 \section{設定}
 
-以下，{\tt main.tex}に対して行うべき設定を，このファイルの中に書いてある順に沿って説明する．
+以下，\texttt{main.tex}に対して行うべき設定を，このファイルの中に書いてある順に沿って説明する．
 
 \subsection{論文全体の言語の設定}
 \label{sec:lang}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \japanesetrue	% 論文全体を日本語で書く（英語で書くならコメントアウト）
 \end{verbatim}
@@ -65,7 +65,7 @@
 
 \subsection{余白の設定}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \bindermode	% バインダ用余白設定
 \end{verbatim}
@@ -79,7 +79,7 @@
 
 両面印刷の場合，偶数ページと奇数ページで余白を広くとるべき側が違うので，\verb|documentclass| でこれを設定する．
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 % 両面印刷の場合．余白を綴じ側に作って右起こし．
 \documentclass[a4j,twoside,openright,11pt]{jreport}
@@ -93,7 +93,7 @@
 \subsection{論文情報の設定}
 \label{sec:meta}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 % 日本語情報（必要なら）
 \jclass  {修士論文}                             % 論文種別
@@ -127,16 +127,16 @@
 
 \section{出力}
 
-\verb|\begin{document}| から \verb|\end{document}| に記述した部分が，実際に{\tt DVI}（最終的には{\tt PDF}）ファイルとして出力される．
+\verb|\begin{document}| から \verb|\end{document}| に記述した部分が，実際に\texttt{DVI}（最終的には\texttt{PDF}）ファイルとして出力される．
 
-\subsection{外部ファイルの読み込み（{\tt include}）}
+\subsection{外部ファイルの読み込み（\texttt{include}）}
 
 出力部分の具体的な説明の前に，外部ファイルを読み込む方法を説明する．
 
-\verb|\begin{document}| から \verb|\end{document}| の間では，\verb|\include| コマンドを使うことで，別の {\tt *.tex} ファイルを読み込ませられる． 
+\verb|\begin{document}| から \verb|\end{document}| の間では，\verb|\include| コマンドを使うことで，別の \texttt{*.tex} ファイルを読み込ませられる． 
 
-\begin{itembox}[l]{{\tt include}しない場合}
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{include}しない場合}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \begin{document}
   \begin{jabstract}
@@ -147,9 +147,9 @@
 \end{itembox}
 \end{itembox}
 
-\begin{itembox}[l]{{\tt include}する場合}
+\begin{itembox}[l]{\texttt{include}する場合}
 \begin{minipage}{0.5\hsize}
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \begin{document}
 \include{01} % 01.texをinclude
@@ -158,7 +158,7 @@
 \end{itembox}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
-\begin{itembox}[l]{{\tt 01.tex}}
+\begin{itembox}[l]{\texttt{01.tex}}
 \begin{verbatim}
 \begin{jabstract}
 ほげほげ
@@ -168,14 +168,14 @@
 \end{minipage}
 \end{itembox}
 
-{\tt include}しない場合とする場合を比較するとこのとおり．どちらも出力結果は一緒．{\tt include}する場合は，読み込ませたい箇所に，読み込ませたい{\tt *.tex}ファイルの名前を，拡張子を除いて \verb|\include| コマンドで書けばよい．
+\texttt{include}しない場合とする場合を比較するとこのとおり．どちらも出力結果は一緒．\texttt{include}する場合は，読み込ませたい箇所に，読み込ませたい\texttt{*.tex}ファイルの名前を，拡張子を除いて \verb|\include| コマンドで書けばよい．
 
 \verb|\include| コマンドを用いるか用いないかは，たぶん文書量や個人の好みに依る．例えば章ごとに別のファイルにしておけば，修正箇所を探すときの手間が多少は省けるかもしれない．Gitで人と共有しつつ校正を頼むときにもファイルが分かれていたほうがコンフリクトを起こしにくい．
 
 
 \subsection{表紙の出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \ifjapanese
   \jmaketitle    % 表紙（日本語）
@@ -193,7 +193,7 @@
 
 \subsection{アブストラクトの出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \include{00_abstract}	% アブストラクト．要独自コマンド，include先参照のこと
 \end{verbatim}
@@ -201,7 +201,7 @@
 
 表紙の次は，アブストラクト．
 
-アブストラクトを出力するには，出力したい位置に，指定のコマンドを用いて文章を書き下せばよい．{\tt main.tex}に直接書いてもよいし，先述した \verb|\include| コマンドを利用して{\tt include}してもよい．
+アブストラクトを出力するには，出力したい位置に，指定のコマンドを用いて文章を書き下せばよい．\texttt{main.tex}に直接書いてもよいし，先述した \verb|\include| コマンドを利用して\texttt{include}してもよい．
 
 \verb|\begin{jabstract}| から \verb|\end{jabstract}| の間に書いた文章が日本語のアブストラクトとして，\verb|\begin{eabstract}| から \verb|\end{eabstract}| の間に書いた文章が英語のアブストラクトとして，それぞれ独立したページに出力される．
 
@@ -214,7 +214,7 @@
 \subsection{目次類の出力}
 \label{sec:toc}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \tableofcontents	% 目次
 \listoffigures		% 表目次
@@ -226,7 +226,7 @@
 
 目次類を出力するには，出力したい位置に指定のコマンドを書けばよい．
 
-これらのコマンドは，コンパイル時点での一時ファイル\footnote{{\tt *.toc}，{\tt *.lof}，{\tt *.lot}}の情報を，目次として体裁を整えて出力するもの．一時ファイルは，\verb|\begin{document}| から \verb|\end{document}| の間の章や節，図や表をコンパイルするときに，ついでに情報を取得しておいて生成される．
+これらのコマンドは，コンパイル時点での一時ファイル\footnote{\texttt{*.toc}，\texttt{*.lof}，\texttt{*.lot}}の情報を，目次として体裁を整えて出力するもの．一時ファイルは，\verb|\begin{document}| から \verb|\end{document}| の間の章や節，図や表をコンパイルするときに，ついでに情報を取得しておいて生成される．
 
 つまり気をつけなければいけないのは，コンパイルを一回しただけでは，一時ファイルが最新の状態に更新されるだけで，肝心の目次は正しい情報では出力されないということ．目次類を正しい情報で出力するには，最低二回のコンパイルが必要．一回目のコンパイルで一時ファイルが最新の情報に更新されて，二回目のコンパイルで初めて，その最新の一時ファイルの情報をもとに目次が出力される．
 
@@ -237,7 +237,7 @@
 
 \subsection{本文の出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \include{01}	% 本文1
 \include{02}	% 本文2
@@ -246,25 +246,25 @@
 \end{verbatim}
 \end{itembox}
 
-目次に続いて，論文のメイン，本文を記述する．アブストラクトと同様で，{\tt main.tex}に直接書くか，\verb|\include| コマンドを利用して別に用意したファイルを{\tt include}する．
+目次に続いて，論文のメイン，本文を記述する．アブストラクトと同様で，\texttt{main.tex}に直接書くか，\verb|\include| コマンドを利用して別に用意したファイルを\texttt{include}する．
 
 本文の書き方は，第\ref{chap:latex}章で詳しく説明する．
 
 
 \subsection{謝辞の出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \include{90_acknowledgment}	% 謝辞．要独自コマンド，include先参照のこと
 \end{verbatim}
 \end{itembox}
 
-本文のあとには，謝辞を出力する．\verb|begin{acknowledgment}| から \verb|end{acknowledgment}| の間に書いた文章が，謝辞として独立したページに出力される．アブストラクトや本文と同じで，{\tt main.tex}に直接書いてもよいし，\verb|\include| コマンドを利用して{\tt include}してもよい．
+本文のあとには，謝辞を出力する．\verb|begin{acknowledgment}| から \verb|end{acknowledgment}| の間に書いた文章が，謝辞として独立したページに出力される．アブストラクトや本文と同じで，\texttt{main.tex}に直接書いてもよいし，\verb|\include| コマンドを利用して\texttt{include}してもよい．
 
 
 \subsection{参考文献の出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \include{91_bibliography}	% 参考文献．要独自コマンド，include先参照のこと
 \end{verbatim}
@@ -276,7 +276,7 @@
 
 BibTeXを使う場合は，以下のようにする．
 
-\begin{itembox}[l]{{\tt 91\_bibliography.tex}}
+\begin{itembox}[l]{\texttt{91\_bibliography.tex}}
 \begin{verbatim}
 \begin{bib}[100]
 \bibliography{main}
@@ -287,7 +287,7 @@ BibTeXを使う場合は，以下のようにする．
 こうすると，\verb|main.bib|から使用した参考文献のみを抽出して出力してくれる．\verb|main.bib|の中身は以下のようになっていて，気の利いた論文検索サイトであればBibTeXをコピペできるようになっているので簡単に作れるはず．
 
 
-\begin{itembox}[l]{{\tt 91\_bibliography.tex}}
+\begin{itembox}[l]{\texttt{91\_bibliography.tex}}
 \begin{verbatim}
 @article{hoge09,
     author  = "ほげ山太郎 and ほげ山次郎",
@@ -311,7 +311,7 @@ BibTeXを使う場合は，以下のようにする．
 
 以下は，BibTeXを使わないで手で書く例．
 
-\begin{itembox}[l]{{\tt 91\_bibliography.tex}}
+\begin{itembox}[l]{\texttt{91\_bibliography.tex}}
 \begin{verbatim}
 @article{hoge09,
     author  = "ほげ山太郎 and ほげ山次郎",
@@ -335,7 +335,7 @@ BibTeXを使う場合は，以下のようにする．
 
 英語の文献の場合，慣例的に書誌名をイタリック体にすることが多いらしい．
 
-\begin{itembox}[l]{{\tt 91\_bibliography.tex}}
+\begin{itembox}[l]{\texttt{91\_bibliography.tex}}
 \begin{verbatim}
 \begin{bib}[100]
 \begin{thebibliography}{#1}
@@ -366,7 +366,7 @@ BibTeXを使う場合は，以下のようにする．
 
 \subsection{付録の出力}
 
-\begin{itembox}[l]{{\tt main.tex}}
+\begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \appendix
 \include{92_appendix}		% 付録

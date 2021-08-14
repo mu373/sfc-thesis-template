@@ -9,7 +9,7 @@
 
 文書構造を明確にする大事なもの．目次はこれらのコマンドをもとに作られる．例えば，この第\ref{chap:latex}章の冒頭部分はこのようなソースで書かれている．
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 \chapter{\LaTeX の書き方}
 \label{chap:latex}
@@ -45,7 +45,7 @@
 
 \subsubsection{小々節見出しサンプルその2}
 
-小々節は，章や節，小節のように {\tt N.N.N} といった番号ではなくて，括弧付きの番号で出力される．かつ，目次には出力されない．
+小々節は，章や節，小節のように \texttt{N.N.N} といった番号ではなくて，括弧付きの番号で出力される．かつ，目次には出力されない．
 
 \subsection{図}
 
@@ -61,7 +61,7 @@
 
 ソースでは次のように記述している．
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 図は次のように出力される（図\ref{fig:sample1}）．
 
@@ -75,12 +75,12 @@
 \end{verbatim}
 \end{itembox}
 
-\verb|\begin{figure}[htbp]|  の{\tt htbp}は，表示位置の優先順位の設定．基本的に\LaTeX では，図の挿入位置は強制的には指定できない．いくつか候補を指定しておくと，候補のなかの優先度の高い順に，図を入れられるスペースがあるかどうかを調べて，入れられればそこに，入れられなければ次の候補のスペースを調べる，という処理が行われる．{\tt h}はこのコマンドを書いたその場所に，{\tt t}はページの一番上に，{\tt b}はページの一番下に，{\tt p}は画像だけ別ページに，それぞれ配置する．基本的には{\tt htbp}のように全部書いておけば問題ない．
+\verb|\begin{figure}[htbp]|  の\texttt{htbp}は，表示位置の優先順位の設定．基本的に\LaTeX では，図の挿入位置は強制的には指定できない．いくつか候補を指定しておくと，候補のなかの優先度の高い順に，図を入れられるスペースがあるかどうかを調べて，入れられればそこに，入れられなければ次の候補のスペースを調べる，という処理が行われる．\texttt{h}はこのコマンドを書いたその場所に，\texttt{t}はページの一番上に，\texttt{b}はページの一番下に，\texttt{p}は画像だけ別ページに，それぞれ配置する．基本的には\texttt{htbp}のように全部書いておけば問題ない．
 
-\verb|\includegraphics| コマンドで，図のサイズと挿入するファイルを指定する．上の例ではサイズは {\tt width=50mm} として幅を指定したけれど，ここは他にも {\tt height=30mm} として高さを指定してもよいし，{\tt scale=0.5} として拡大率を指定してもよい．画像は最近の \LaTeX 環境であれば{\tt *.eps}以外でも使える．ただし，{\tt bb} (Bounding Box) として画像の大きさを指定する必要があることも多い．
+\verb|\includegraphics| コマンドで，図のサイズと挿入するファイルを指定する．上の例ではサイズは \texttt{width=50mm} として幅を指定したけれど，ここは他にも \texttt{height=30mm} として高さを指定してもよいし，\texttt{scale=0.5} として拡大率を指定してもよい．画像は最近の \LaTeX 環境であれば\texttt{*.eps}以外でも使える．ただし，\texttt{bb} (Bounding Box) として画像の大きさを指定する必要があることも多い．
 以下はJPEG画像を使用する例．
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 \begin{figure}[htbp]
     \begin{center}
@@ -92,9 +92,9 @@
 \end{verbatim}
 \end{itembox}
 
-bbの指定は，上記のように{\tt *.tex} ファイルの中で指定してもいいが，
-{\tt *.bb}ファイルを作っておく方法もある．
-ターミナルで{\tt ebb}コマンドを使用すると{\tt *.bb}ファイルを簡単に作れる．
+bbの指定は，上記のように\texttt{*.tex} ファイルの中で指定してもいいが，
+\texttt{*.bb}ファイルを作っておく方法もある．
+ターミナルで\texttt{ebb}コマンドを使用すると\texttt{*.bb}ファイルを簡単に作れる．
 
 
 \begin{itembox}[l]{ebbコマンドの例}
@@ -129,7 +129,7 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
   \end{minipage}
 \end{figure}
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 図を二つ横に並べたい場合は，次のように書く（図\ref{fig:sample2}，図\ref{fig:sample3}）．
 
@@ -172,7 +172,7 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
 
 ソースでは次のようになっている．
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 表は次のように出力される（表\ref{tb:sample1}）．
 
@@ -191,11 +191,11 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
 \end{verbatim}
 \end{itembox}
 
-{\tt htbp}や \verb|\caption| と \verb|\label| は図と同様．ただし表のタイトルは表の上に書く．
+\texttt{htbp}や \verb|\caption| と \verb|\label| は図と同様．ただし表のタイトルは表の上に書く．
 
-\verb|\begin{tabular}{l|{\tt \textbar}{\tt c}{\tt \textbar}\verb|r}|で横方向のセルを指定する．{\tt c}は中央揃え，{\tt l}は左揃え，{\tt r}は右揃えのセルを作る．{\tt \textbar}は垂直方向の罫線を表す．{\tt c}か{\tt l}か{\tt r}を必要なセルの数だけ並べて，セルの間に罫線が必要なら{\tt \textbar}を入れればよい．
+\verb|\begin{tabular}{l|\texttt{\textbar}\texttt{c}\texttt{\textbar}\verb|r}|で横方向のセルを指定する．\texttt{c}は中央揃え，\texttt{l}は左揃え，\texttt{r}は右揃えのセルを作る．\texttt{\textbar}は垂直方向の罫線を表す．\texttt{c}か\texttt{l}か\texttt{r}を必要なセルの数だけ並べて，セルの間に罫線が必要なら\texttt{\textbar}を入れればよい．
 
-セルの中の文字は，{\tt \&}で区切って並べる．行と行は \verb|\\| で区切る．水平方向の罫線が必要なら，\verb|\hline| を書く．
+セルの中の文字は，\texttt{\&}で区切って並べる．行と行は \verb|\\| で区切る．水平方向の罫線が必要なら，\verb|\hline| を書く．
 
 水平方向や垂直方向のセルの結合もできる．例を示すので，くわしくはぐぐろう．説明がめんどう．\verb|\multirow|，\verb|\multicolumn|，\verb|\cline| を使うとできる．
 
@@ -212,7 +212,7 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
   \end{center}
 \end{table}
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 \begin{table}[htbp]
   \caption{セルを結合した例}
@@ -234,7 +234,7 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
 
 脚注は \verb|\footnote| コマンドを使う．例えばこんな感じ\footnote{ページの下に小さく説明を出せる}．
 
-\begin{itembox}[l]{{\tt 03.tex}}
+\begin{itembox}[l]{\texttt{03.tex}}
 \begin{verbatim}
 例えばこんな感じ\footnote{ページの下に小さく説明を出せる}．
 \end{verbatim}
@@ -246,4 +246,4 @@ bbの指定は，上記のように{\tt *.tex} ファイルの中で指定して
 
 特殊なことは何もしていないテンプレートなので，ぐぐって出たことはだいたいそのまま何でも使える．
 
-あるいは，このファイル自体も\LaTeX で書かれているわけだから，これの{\tt *.tex}を見るのもよいかもしれない．
+あるいは，このファイル自体も\LaTeX で書かれているわけだから，これの\texttt{*.tex}を見るのもよいかもしれない．
