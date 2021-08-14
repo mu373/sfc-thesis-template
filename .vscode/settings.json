@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/*.aux": true
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "main.tex"
+            ],
+        },
+    ],
+}
