@@ -41,6 +41,11 @@
 
 \usepackage{lmodern}
 
+% gitコミットハッシュをフッターに挿入
+% 最終書き出し時にはコメントアウト
+\usepackage[subrefformat=parens]{subcaption}
+\usepackage[mark]{gitinfo2}
+\renewcommand{\gitMark}{commit \gitAbbrevHash\space(\gitAuthorDate)}
 
 % \bindermode  % バインダー用余白設定
 

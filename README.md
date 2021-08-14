@@ -7,6 +7,16 @@
 https://github.com/ymrl/thesis-template
 
 ## 使い方
+
+### PDFのフッターにcommit hashを入れる
+
+- `post-commit`というファイルを`.git/hooks/`内に置かないと、LaTeXの`gitinfo2`パッケージがコミット情報を認識してくれない
+- 以下のスクリプトでセットアップができる
+
+```
+sh ./scripts/setup.sh
+```
+
 1. 自分のレポジトリに `git clone` する
 2. overleafのアカウントで、`import form github` を選ぶ
 3. `Menu` から、コンパイル => `LaTeX` を選ぶ
