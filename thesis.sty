@@ -223,12 +223,16 @@
 
 % 謝辞環境の作成
 \newenvironment{acknowledgment}{%
+  \cleardoublepage
+  \phantomsection
   \addcontentsline{toc}{chapter}{\acknowledgmentname}
   \chapter*{\acknowledgmentname}
 }{}
 
 % 参考文献環境の作成
 \newenvironment{bib}[1][100]{%
+  \cleardoublepage
+  \phantomsection
   \addcontentsline{toc}{chapter}{\bibname}
 }{}
 
