@@ -6,9 +6,6 @@
         {
             "name": "latexmk",
             "command": "latexmk",
-            "args": [
-                "main.tex"
-            ],
         },
     ],
 }
