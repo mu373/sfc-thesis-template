@@ -26,11 +26,10 @@
 \fi
 \usepackage{thesis}
 \usepackage{ascmac}
-\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx,color}
 \usepackage{multirow}
 \usepackage{url}
 \usepackage{lipsum}
-\usepackage{color}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper}
 \bibliographystyle{jplain}
@@ -61,6 +60,13 @@
 \eproject{}                 %プロジェクト名
 \edate{July 2021}
 
+
+% hyperrefの設定
+\hypersetup{
+  hidelinks, %リンクに赤枠を表示しない
+  pdftitle={PDF Title},
+  pdfauthor={Taro Keio}
+}
 
 
 
