@@ -27,6 +27,7 @@
 \def\jfaculty#1{\gdef\@jfaculty{#1}}
 \def\jauthor#1{\gdef\@jauthor{#1}}
 \def\jadvisor#1#2{\gdef\@jadvisor{#1}\gdef\@jposition{#2}}
+\def\jera#1{\gdef\@jera{#1}}
 \def\jhyear#1{\gdef\@jhyear{#1}}
 \def\jsyear#1{\gdef\@jsyear{#1}}
 \def\jkeyword#1{\gdef\@jkeyword{#1}}
@@ -86,8 +87,8 @@
 \def\@jmaketitle{%
   \thispagestyle{empty}
   \begin{center}
-    {\Large \@jclass\ \ \ \@jsyear 年度（令和\@jhyear 年度）}
     \pdfbookmark{表紙}{cover}
+    {\Large \@jclass\ \ \ \@jsyear 年度（\@jera\@jhyear 年度）}
     \vfill
     \begin{lineskiptitle}
     {\huge\bf \@jtitle}
@@ -142,8 +143,8 @@
 % アブストラクトの定義（日本語）
 \newenvironment{jabstract}{%
   \begin{center}
-    {\Large\bf \@jclass　\@jsyear 年度（平成\@jhyear 年度）}
     \pdfbookmark{論文要旨}{jabstract}
+    {\Large\bf \@jclass　\@jsyear 年度（\@jera\@jhyear 年度）}
     \vspace{0.5cm}\par
     \begin{lineskipabst}
     {\LARGE\bf \@jtitle}\vspace{0.5cm}
