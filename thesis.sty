@@ -87,6 +87,7 @@
   \thispagestyle{empty}
   \begin{center}
     {\Large \@jclass\ \ \ \@jsyear 年度（令和\@jhyear 年度）}
+    \pdfbookmark{表紙}{cover}
     \vfill
     \begin{lineskiptitle}
     {\huge\bf \@jtitle}
@@ -142,6 +143,7 @@
 \newenvironment{jabstract}{%
   \begin{center}
     {\Large\bf \@jclass　\@jsyear 年度（平成\@jhyear 年度）}
+    \pdfbookmark{論文要旨}{jabstract}
     \vspace{0.5cm}\par
     \begin{lineskipabst}
     {\LARGE\bf \@jtitle}\vspace{0.5cm}
@@ -191,6 +193,7 @@
 
 % 目次環境再定義
 \renewcommand{\tableofcontents}{%
+  \pdfbookmark{目次}{toc}
   \section*{\contentsname}
   \begin{singlespace}
   \@starttoc{toc}
@@ -200,6 +203,7 @@
 
 % 図目次環境再定義
 \renewcommand{\listoffigures}{%
+  \pdfbookmark[1]{図目次}{lof}
   \section*{\listfigurename}
   \begin{singlespace}
   \@starttoc{lof}
@@ -209,6 +213,7 @@
 
 % 表目次環境再定義
 \renewcommand{\listoftables}{%
+  \pdfbookmark[1]{表目次}{lot}
   \section*{\listtablename}
   \begin{singlespace}
   \@starttoc{lot}
