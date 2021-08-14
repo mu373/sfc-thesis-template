@@ -10,11 +10,20 @@ https://github.com/ymrl/thesis-template
 
 ### PDFのフッターにcommit hashを入れる
 
+ページのフッターにcommitハッシュとcommit日時を入れておくと、PDF（あるいはそれを印刷したもの）を見るときに、どの時点でのコミットに対応しているものかを確認できて便利。
+
 - `post-commit`というファイルを`.git/hooks/`内に置かないと、LaTeXの`gitinfo2`パッケージがコミット情報を認識してくれない
 - 以下のスクリプトでセットアップができる
 
-```
+```sh
 sh ./scripts/setup.sh
+```
+
+- 提出用のPDFを生成するときには`main.tex`で以下をコメントアウトして、フッターから情報を削除する
+
+```tex
+\usepackage[mark]{gitinfo2}
+\renewcommand{\gitMark}{commit \gitAbbrevHash\space(\gitAuthorDate)}
 ```
 
 ### Overleafで使う場合
