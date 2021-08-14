@@ -1,10 +1,8 @@
-# Overleaf対応 修士論文・卒業論文用LaTeXテンプレート
+# SFC卒業論文用LaTeXテンプレート
 
-村井研に受け継がれし偉大なるテンプレートであるところの、ymrlさんのテンプレを元に、Overleaf対応をしました。
+こちらの[テンプレート](https://github.com/sasn0/thesis-overleaf-template)をベースに作った、SFC卒業論文用LaTeXテンプレートです。[ymrlさんのテンプレート](https://github.com/ymrl/thesis-template)が大元のフォーク元です。
 
-尊敬してやまない元テンプレは以下。
 
-https://github.com/ymrl/thesis-template
 
 ## 使い方
 
@@ -28,7 +26,7 @@ sh ./scripts/setup.sh
 
 ### Overleafで使う場合
 1. 自分のレポジトリに `git clone` する
-2. overleafのアカウントで、`import form github` を選ぶ
+2. overleafのアカウントで、`import from github` を選ぶ
 3. `Menu` から、コンパイル => `LaTeX` を選ぶ
 4. `Menu` から、Main Document => `main.tex` を選ぶ
 
