@@ -17,14 +17,14 @@ https://github.com/ymrl/thesis-template
 sh ./scripts/setup.sh
 ```
 
+### Overleafで使う場合
 1. 自分のレポジトリに `git clone` する
 2. overleafのアカウントで、`import form github` を選ぶ
 3. `Menu` から、コンパイル => `LaTeX` を選ぶ
 4. `Menu` から、Main Document => `main.tex` を選ぶ
 
-以上。
 
-### 小ネタ
+### コメントを定義
 thesis.styをちょっといじったりすると、コメント定義ができる。
 
 コメントを消したかったら、trueをコメントアウトして、falseのコメントアウトを外せばok。
