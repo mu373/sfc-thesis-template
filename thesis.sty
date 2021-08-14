@@ -92,7 +92,7 @@
     {\huge\bf \@jtitle}
     \end{lineskiptitle}
     \vfill
-    {\Large \@juniv\ \@jfaculty}
+    {\Large \@juniv\ \@jfaculty}\par
     \vspace{0.5cm}\par
     {\LARGE \@jauthor}
     \vspace{2cm}\par
@@ -144,7 +144,7 @@
     {\Large\bf \@jclass　\@jsyear 年度（平成\@jhyear 年度）}
     \vspace{0.5cm}\par
     \begin{lineskipabst}
-    {\LARGE\bf \@jtitle}\vspace{2cm}
+    {\LARGE\bf \@jtitle}\vspace{0.5cm}
     \end{lineskipabst}
   \end{center}
   \parindent=1zw
@@ -153,9 +153,9 @@
 }{
   \section*{キーワード}
   \@jkeyword \par
-  \vspace{2.5cm}\par
-  {\@juniv} {\@jfaculty}
+  \vspace{1cm}\par
   \begin{flushright}
+    {\@juniv} {\@jfaculty} \par
     {\@jauthor}
   \end{flushright}
 
@@ -167,22 +167,20 @@
 % アブストラクトの定義（英語）
 \newenvironment{eabstract}{%
   \begin{center}
-    {\Large\bf \@eclass\ Abstract \ \ Academic Year \@eyear}
-    \vspace{0.5cm}\par
+    {\Large\bf \@eclass\ Abstract \\ Academic Year \@eyear}
+    \vspace{0.3cm}\par
     \begin{lineskipabst}
-    {\LARGE\sf \@etitle}\vspace{2cm}
+    {\LARGE\bf \@etitle}\vspace{0.2cm}
     \end{lineskipabst}
   \end{center}
   \parindent=1.6zw
   \section*{Summary}
-  \ifjapanese \renewcommand{\baselinestretch}{0.89}\selectfont \fi
 }{
   \section*{Keywords}
   \@ekeyword \par
-  \vspace{2.5cm}\par
-  {\@efaculty} \par
-  {\@euniv}
+  \vspace{0.5cm}\par
   \begin{flushright}
+    {\@euniv}, {\@efaculty} \par
     {\@eauthor}
   \end{flushright}
 
