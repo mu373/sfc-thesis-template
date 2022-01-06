@@ -1,11 +1,13 @@
 # SFC卒業論文用LaTeXテンプレート
 
-こちらの[テンプレート](https://github.com/sasn0/thesis-overleaf-template)をベースに作った、SFC卒業論文用LaTeXテンプレートです。元となっているテンプレートは、関連リンクに記載しています。
+## 概要
 
-以下のような変更を加えています。
+こちらの[テンプレート](https://github.com/sasn0/thesis-overleaf-template)をベースに作った、SFC卒業論文用LaTeXテンプレートです。大元のフォーク元テンプレートは、「関連リンク」に記載しています。
+
+主に以下のような変更を加えています。
 
 - PDF目次に対応（`hyperref`を使用）
-- 元号を令和に変更（変数として任意に定義可能なよう変更）
+- 元号を令和に変更（元号を変数として任意に定義可能なよう変更）
 - commit hashをフッターに追加（`gitinfo2`を使用）
 - 行間をダブルスペースに変更
 - 参考文献スタイルをjunsrtに変更
@@ -13,18 +15,22 @@
 
 ## 使い方
 
+## PDFを書き出す
+- `latexmk`で一発でPDFを作成できます。
+- LaTeX Workshopを入れたVSCodeで執筆すると便利です。ファイルを保存するたびに自動でビルドしてくれて、PDFを見ながら執筆ができます。
+
 ### PDFのフッターにcommit hashを入れる
 
-ページのフッターにcommitハッシュとcommit日時を入れておくと、PDF（あるいはそれを印刷したもの）を見るときに、どの時点でのコミットに対応しているものかを確認できて便利。`gitinfo2`というLaTexパッケージを使うことで、これを実現できる。
+ページのフッターにcommitハッシュとcommit日時を入れておくと、PDF（あるいはそれを印刷したもの）を見るときに、どの時点でのコミットに対応しているものかを確認できて便利です。`gitinfo2`というLaTexパッケージを使います。
 
-- `post-commit`というファイルを`.git/hooks/`内に置かないと、LaTeXの`gitinfo2`がコミット情報を認識してくれない
-- 以下のスクリプトでセットアップができる
+- `post-commit`というファイルを`.git/hooks/`内に置かないと、LaTeXの`gitinfo2`がコミット情報を認識してくれません
+- 以下のスクリプトでセットアップが必要です。（中身をもらえればわかりますが、単純に`post-commit`を`.git/hooks/`内にコピーしているだけです）
 
 ```sh
 sh ./scripts/setup.sh
 ```
 
-- 提出用のPDFを生成するときには`main.tex`で以下をコメントアウトする（フッターからコミット情報が入らなくなる）
+- 提出用のPDFを生成するときには`main.tex`で以下をコメントアウトします（フッターからコミット情報が入らなくなる）
 
 ```tex
 \usepackage[mark]{gitinfo2}
@@ -39,25 +45,84 @@ sh ./scripts/setup.sh
 
 
 ### コメントを定義
-thesis.styをちょっといじったりすると、コメント定義ができる。
+thesis.sty内で、コメントを定義することができます。
 
-コメントを消したかったら、trueをコメントアウトして、falseのコメントアウトを外せばok。
+コメントを消したかったら、trueをコメントアウトして、falseのコメントアウトを外せばOKです。
 ```
 \notestrue          %コメントoff時コメントアウト
 %\notesfalse        %コメントon時コメントアウト
 ```
 
-下記のようにすれば、コメントの色と名称の指定ができる。
+下記のようにすれば、コメントの色と名称の指定ができます。
 ```
 \newcommand{\sassan}[1]{\colornote{red}{#1}{sassan}}
 \newcommand{\harusame}[1]{\colornote{blue}{#1}{harusame}}
 ```
 
-## ライセンス
->オリジナルのテンプレートについては（おそらく） @kurokobo に著作権があります。
->私が改造した部分についてはすべての権利を放棄いたします。
 
-元テンプレにこうありますが、私が手を入れた箇所についても、すべての権利を放棄致します。
+## 参考：環境構築
+Mac上で、VSCodeのLaTeX Workshopを使って執筆するワークフローを想定しています。
+
+- MacTexのGUIなしバージョンをインストールする
+```sh
+brew install mactex-no-gui
+sudo tlmgr update --self --all
+```
+
+- VSCodeに[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする
+- VSCodeの設定（JSONファイル）に以下を追加する
+```json
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+        },
+    ],
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.synctex.gz",
+        "_minted*",
+        "*.nav",
+        "*.snm",
+        "*.vrb",
+        "*.run.xml",
+        "*.dvi",
+        "*.bcf"
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "workbench.activityBar.visible": false,
+```
+
+## ライセンス
+元テンプレと同様に、私が改造した部分についてもすべての権利を放棄します。
 
 ## 関連リンク
 - [@kurokobo 卒業論文用テンプレート](https://wiki.kurokobo.com/index.php?LaTeX)
