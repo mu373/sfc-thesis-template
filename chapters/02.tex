@@ -88,7 +88,7 @@
 \end{verbatim}
 \end{itembox}
 
-両面印刷の場合は \verb|twoside| を使用する．\verb|openright| を使うと章のはじまりが必ず右側のページに来るようになる．
+両面印刷の場合は \texttt{twoside} を使用する．\texttt{openright} を使うと章のはじまりが必ず右側のページに来るようになる．
 
 \subsection{論文情報の設定}
 \label{sec:meta}
@@ -129,14 +129,14 @@
 
 \verb|\begin{document}| から \verb|\end{document}| に記述した部分が，実際に\texttt{DVI}（最終的には\texttt{PDF}）ファイルとして出力される．
 
-\subsection{外部ファイルの読み込み（\texttt{include}）}
+\subsection{外部ファイルの読み込み}
 
 出力部分の具体的な説明の前に，外部ファイルを読み込む方法を説明する．
 
 \verb|\begin{document}| から \verb|\end{document}| の間では，\verb|\include| コマンドを使うことで，別の \texttt{*.tex} ファイルを読み込ませられる． 
 
 \begin{itembox}[l]{\texttt{include}しない場合}
-\begin{itembox}[l]{\texttt{main.tex}}
+  \begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
 \begin{document}
   \begin{jabstract}
@@ -144,10 +144,11 @@
   \end{jabstract}
 \end{document}
 \end{verbatim}
-\end{itembox}
+  \end{itembox}
 \end{itembox}
 
 \begin{itembox}[l]{\texttt{include}する場合}
+
 \begin{minipage}{0.5\hsize}
 \begin{itembox}[l]{\texttt{main.tex}}
 \begin{verbatim}
@@ -157,6 +158,7 @@
 \end{verbatim}
 \end{itembox}
 \end{minipage}
+
 \begin{minipage}{0.5\hsize}
 \begin{itembox}[l]{\texttt{01.tex}}
 \begin{verbatim}
@@ -166,6 +168,7 @@
 \end{verbatim}
 \end{itembox}
 \end{minipage}
+
 \end{itembox}
 
 \texttt{include}しない場合とする場合を比較するとこのとおり．どちらも出力結果は一緒．\texttt{include}する場合は，読み込ませたい箇所に，読み込ませたい\texttt{*.tex}ファイルの名前を，拡張子を除いて \verb|\include| コマンドで書けばよい．
