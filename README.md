@@ -15,7 +15,7 @@
 
 ## 使い方
 
-## テンプレートをダウンロードする
+### テンプレートをダウンロードする
 - [Releases](https://github.com/mu373/sfc-thesis-template/releases/)からダウンロードできます
 - `main.pdf`はこのテンプレートをビルドしたPDFです
 
