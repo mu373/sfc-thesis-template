@@ -15,6 +15,11 @@
 
 ## 使い方
 
+## テンプレートをダウンロードする
+- [Releases](https://github.com/mu373/sfc-thesis-template/releases/)からダウンロードできます
+- `main.pdf`はこのテンプレートをビルドしたPDFです
+
+
 ### PDFを書き出す
 - `latexmk`で一発でPDFを作成できます。
 - LaTeX Workshopを入れたVSCodeで執筆すると便利です。ファイルを保存するたびに自動でビルドしてくれて、PDFを見ながら執筆ができます。
@@ -44,7 +49,7 @@ sh ./scripts/setup.sh
 4. `Menu` から、Main Document => `main.tex` を選ぶ
 
 
-### コメントを定義
+### コメントを定義する
 thesis.sty内で、コメントを定義することができます。
 
 コメントを消したかったら、trueをコメントアウトして、falseのコメントアウトを外せばOKです。
