@@ -121,6 +121,8 @@ sudo tlmgr update --self --all
     "workbench.activityBar.visible": false,
 ```
 
+- VSCode上で`command + shift + P`して、｀Build LaTeX project` `View LaTeX PDF file`するとPDFが表示されるはずです。
+
 ## ライセンス
 元テンプレと同様に、私が改造した部分についてもすべての権利を放棄します。
 
@@ -128,3 +130,4 @@ sudo tlmgr update --self --all
 - [@kurokobo 卒業論文用テンプレート](https://wiki.kurokobo.com/index.php?LaTeX)
 - [ymrl/thesis-template](https://github.com/ymrl/thesis-template)
 - [sasn0/thesis-overleaf-template](https://github.com/sasn0/thesis-overleaf-template)
+- [LaTeX with VSCodeな環境を整える（Mac）](https://m12watanabe1a.hatenablog.com/entry/2019/09/30/020036)
