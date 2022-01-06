@@ -61,16 +61,16 @@ thesis.sty内で、コメントを定義することができます。
 
 
 ## 参考：環境構築
-Mac上で、VSCodeのLaTeX Workshopを使って執筆するワークフローを想定しています。
+Mac上で、VS CodeのLaTeX Workshopを使って執筆するワークフローを想定しています。
 
-- MacTexのGUIなしバージョンをインストールする
+- MacTeXのGUIなしバージョンをインストールする
 ```sh
 brew install mactex-no-gui
 sudo tlmgr update --self --all
 ```
 
-- VSCodeに[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする
-- VSCodeの設定（JSONファイル）に以下を追加する
+- VS Codeに[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする
+- VS Codeの設定（JSONファイル）に以下を追加する
 ```json
     "latex-workshop.latex.recipes": [
         {
@@ -121,7 +121,8 @@ sudo tlmgr update --self --all
     "workbench.activityBar.visible": false,
 ```
 
-- VSCode上で`command + shift + P`して、｀Build LaTeX project` `View LaTeX PDF file`するとPDFが表示されるはずです。
+- VSCode上で`command + shift + P`して、｀Build LaTeX project`・`View LaTeX PDF file`するとPDFが表示されるはずです。
+
 
 ## ライセンス
 元テンプレと同様に、私が改造した部分についてもすべての権利を放棄します。
