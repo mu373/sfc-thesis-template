@@ -121,7 +121,7 @@ sudo tlmgr update --self --all
     "workbench.activityBar.visible": false,
 ```
 
-- VSCode上で`command + shift + P`して、｀Build LaTeX project`・`View LaTeX PDF file`するとPDFが表示されるはずです。
+- VS Code上で`command + shift + P`して、｀Build LaTeX project`・`View LaTeX PDF file`するとPDFが表示されるはずです。
 
 
 ## ライセンス
