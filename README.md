@@ -24,7 +24,7 @@
 sh ./scripts/setup.sh
 ```
 
-- 提出用のPDFを生成するときには`main.tex`で以下をコメントアウトして、フッターから情報を削除する
+- 提出用のPDFを生成するときには`main.tex`で以下をコメントアウトする（フッターからコミット情報が入らなくなる）
 
 ```tex
 \usepackage[mark]{gitinfo2}
